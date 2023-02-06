@@ -2,7 +2,7 @@
 
  Sistema desenvolvido com a liguagem de programação Java.
  
- Nos arquivos do jogo comtem o codigo fonte comentado.
+ Nos arquivos do jogo contem o codigo fonte comentado.
  
  # Link do video tutorial ensinando a desenvolver o projeto do zero.
  
