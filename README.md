@@ -6,6 +6,6 @@
  
  # Link do video tutorial ensinando a desenvolver o projeto do zero.
  
- [![Link do video - Tela de Login Profissional com POO em Java](https://imgur.com/Up0LZAQ)](https://www.youtube.com/watch?v=9otpx-E4ODU&list=PLfHEF0XhLLrvkSAn2DlHh3G0G6YaYEt7u&index=5)
+ [![Link do video - Tela de Login Profissional com POO em Java](https://imgur.com/a/a6Pm5U2)](https://www.youtube.com/watch?v=9otpx-E4ODU&list=PLfHEF0XhLLrvkSAn2DlHh3G0G6YaYEt7u&index=5)
  
  * [Link do video - Tela de Login Profissional com POO em Java](https://www.youtube.com/watch?v=9otpx-E4ODU&list=PLfHEF0XhLLrvkSAn2DlHh3G0G6YaYEt7u&index=5)
