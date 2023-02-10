@@ -4,8 +4,11 @@
  */
 package App.telas;
 
+import App.DAO.UsuarioDAO;
 import App.entities.ValidarLogin;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import java.sql.ResultSet;
 
 /**
  *
@@ -102,22 +105,28 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void jButton_entrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_entrarActionPerformed
         
-        String loginPadrao = "tiago";
-        String senhaPadrao = "1234";
-        
-        ValidarLogin validarlogin = new ValidarLogin(loginPadrao, senhaPadrao);
-        
-        String field_login = jTextField_login.getText();
-        String password_senha = jPasswordField_senha.getText();
-        
-        boolean validacao = validarlogin.logar(field_login, password_senha);
-        
-        if(validacao == false){
-            JOptionPane.showMessageDialog(null, "Informações invalidas!");
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Login efetuado com sucesso!");
-        }             
+        try {
+            
+            String field_login = jTextField_login.getText();
+            String password_senha = jPasswordField_senha.getText();
+
+            ValidarLogin validarlogin = new ValidarLogin();
+
+            validarlogin.setLogin(field_login);
+            validarlogin.setSenha(password_senha);
+            
+            UsuarioDAO objusuariodao = new UsuarioDAO();
+            ResultSet rsusuariodao = objusuariodao.autenticacaoUsuario(validarlogin);
+            
+            if (rsusuariodao.next()) {
+                JOptionPane.showMessageDialog(null, "Login efetuado, Bem vindo!");
+            }else{
+                JOptionPane.showMessageDialog(null, "Login ou senha incorreta!");
+            }    
+            
+        }catch (SQLException erro){
+            JOptionPane.showMessageDialog(null, "TelaLogin: " + erro.getMessage());
+        }  
     }//GEN-LAST:event_jButton_entrarActionPerformed
 
     /**

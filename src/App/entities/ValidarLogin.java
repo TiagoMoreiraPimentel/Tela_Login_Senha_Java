@@ -1,8 +1,9 @@
 package App.entities;
 
 public class ValidarLogin {
-    
+
     // atributos da classe
+    private int id_usuario;
     private String login;
     private String senha;
 
@@ -11,24 +12,20 @@ public class ValidarLogin {
     }
 
     // construtor com argumentos
-    public ValidarLogin(String login, String senha) {
+    public ValidarLogin(int id_usuario, String login, String senha) {
+        this.id_usuario = id_usuario;
         this.login = login;
         this.senha = senha;
     }
-    
-    // função responsavel por validar o acesso
-    public boolean logar(String login, String senha){
-        boolean validar;
-        if(this.login.equals(login) && this.senha.equals(senha)){
-            validar = true;
-        }
-        else{
-            validar = false;
-        }
-        return validar;
+    // Getters and Setters
+    public int getId_usuario() {
+        return id_usuario;
     }
 
-    // Getters and Setters
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
+    }
+
     public String getLogin() {
         return login;
     }
