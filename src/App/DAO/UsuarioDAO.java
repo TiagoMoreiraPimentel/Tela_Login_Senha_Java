@@ -14,7 +14,7 @@ public class UsuarioDAO {
 
     public ResultSet autenticacaoUsuario(ValidarLogin objvalidarlogin) {
 
-        conn = new ConexaoDAO().ConectaBD();
+        conn = new ConexaoLoginDAO().ConectaBD();
 
         try {
             String sql = "select * from usuario where nome_usuario = ? and senha_usuario = ? ";
